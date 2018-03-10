@@ -6,7 +6,7 @@ using namespace boost::python;
 
 BOOST_PYTHON_MODULE(hello_world)
 {
-	class_<HelloWorldSayer>("hello_world",init<>())
+	class_<HelloWorldSayer>("HelloWorldSayer",init<>())
 		.def("SayHello", &HelloWorldSayer::SayHello)
 		;
 }

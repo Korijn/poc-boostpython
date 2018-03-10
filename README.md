@@ -1,20 +1,35 @@
 # Proof of Concept Boost Python
 
-First download and unpack into repo root a source distribution of boost http://www.boost.org/
+This repository demonstrates how to build a package with a Boost.Python module in it, 
+and how to distribute it as a wheel.
 
-Then open a console:
+## Windows requirements
+
+Install VS2017 build tools.
+
+## Acquire Boost sources
+
+Download and unpack into repo root a source distribution of boost http://www.boost.org/. 
+At the time writing, v1.66.0 is latest.
+
+## Install Boost.Python
 
 ```
-> "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" amd64
-> cd boost_1_66_0
-> bootstrap
-> b2 toolset=msvc link=shared --with-python -j4
-> cd ..
-> python setup.py build
+> pipenv install --dev
+> pipenv run python build_boost.py
 ```
 
-Had to manually copy over the boost_python lib and dll files into the build dir for it to work.
+## Building the package
 
-If you are getting warnings about Boost.config and your compiler version, append `define="BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE=1"` to the command.
+```
+> pipenv run python setup.py build_ext
+```
 
-If something fails, clean up before trying again with `b2 --clean`.
+Add `-i` for an in-place build, giving you a development setup.
+
+## Testing
+
+```
+> pipenv run python -c "from hwpkg import HelloWorldSayer; HelloWorldSayer().SayHello()"
+Hello World!
+```
