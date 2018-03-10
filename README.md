@@ -53,7 +53,6 @@ your IDE to run this command on-save of your source files for a pleasant  develo
 ## Building a wheel
 
 ```
-> pipenv run python build_boost.py
 > pipenv run python setup.py bdist_wheel
 ```
 
