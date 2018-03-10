@@ -1,4 +1,6 @@
 boost_*
-*/build*
-.vscode*
+build
+.vscode
 *.pyc
+__pycache__
+*.pyd
