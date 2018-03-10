@@ -8,11 +8,11 @@ name = "pypi"
 [packages]
 
 
-
 [dev-packages]
 
 wheel = "*"
 setuptools = "*"
+"flake8" = "*"
 
 
 [requires]
