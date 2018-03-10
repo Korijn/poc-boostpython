@@ -25,15 +25,23 @@ At the time writing, v1.66.0 is latest.
 
 ## Build Boost.Python
 
-Make sure to append `--init` on your first call to initialize Boost.Build.
+Run the following command at least once:
 
-Append `install` if you are looking for a development setup. Boost will be installed into
-your virtualenv.
+```
+> pipenv run python build_boost.py --init
+```
 
 ## Development setup
 
+First istall boost into your virtualenv (so that DLLs etc. will be on their expected paths):
+
 ```
 > pipenv run python build_boost.py install
+```
+
+Then use `setup.py develop` as usual:
+
+```
 > pipenv run python setup.py develop
 > pipenv run python -c "from hwpkg import HelloWorldSayer; HelloWorldSayer().SayHello()"
 Hello World!
