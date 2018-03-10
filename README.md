@@ -4,6 +4,10 @@ This repository demonstrates how to build a package with a Boost.Python module i
 and how to distribute it as a wheel. The wheel also includes the Boost.Python library,
 so that users will not need to install Boost on their systems separately.
 
+## Current Status
+
+Tested on Windows 10 x64 CPython 3.6.4.
+
 ## Windows requirements
 
 Install VS2017 build tools.
