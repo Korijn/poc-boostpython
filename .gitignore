@@ -1,0 +1,4 @@
+boost_*
+*/build*
+.vscode*
+*.pyc
