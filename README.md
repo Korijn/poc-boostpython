@@ -47,6 +47,15 @@ Then use `setup.py develop` as usual:
 Hello World!
 ```
 
+Now, if you want to recompile your sources, all you need to run is:
+
+```
+> pipenv run python setup.py build_ext -i
+```
+
+Configure your IDE to run this command on-save of your source files for a pleasant 
+development cycle.
+
 ## Building a wheel
 
 ```
