@@ -33,7 +33,7 @@ Run the following command at least once:
 
 ## Development setup
 
-First istall boost into your virtualenv (so that DLLs etc. will be on their expected paths):
+First install boost into your virtualenv (so that DLLs etc. will be on their expected paths):
 
 ```
 > pipenv run python build_boost.py install
